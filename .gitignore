@@ -1,0 +1,44 @@
+# ── Local / IDE / OS ─────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.bak
+/local-xdebuginfo.php
+/local-phpinfo.php
+/.htaccess
+/wordfence-waf.php
+/auth.json
+*.log
+
+# ── Secrets / environment-specific config (see wp-config.php) ────────────────
+/wp-config-local.php
+
+# ── WordPress core: not versioned (Local supplies it locally, the NAS deploy
+#    installs it with Composer through bin/install-core.php) ──────────────────
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+/wp-admin/
+/wp-includes/
+!/wp-config.php
+
+# ── Composer ─────────────────────────────────────────────────────────────────
+/vendor/
+
+# ── wp-content: everything is either Composer-managed or production data,
+#    except the code that belongs to this site (allow-listed below) ───────────
+/wp-content/*
+!/wp-content/plugins/
+!/wp-content/themes/
+!/wp-content/mu-plugins/
+/wp-content/plugins/*
+/wp-content/themes/*
+
+# This site's own code – committed directly.
+!/wp-content/themes/home-gnome/
+
+# macOS metadata: keep last so the allow-list above cannot re-include it.
+**/.DS_Store

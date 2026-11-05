@@ -1,0 +1,122 @@
+# Deploy this repo to its site on the NAS.
+#
+# Copy this file unchanged into the project repo as .github/workflows/deploy.yml.
+# Nothing in here names the site: the NAS decides which site a key may deploy
+# (the key is bound to one site by a forced command in authorized_keys), so
+# the same file works for every project repo. See the "GitHub deploys"
+# section of tbwebdesign-server-infrastructure/README.md for the one-time
+# setup (secrets, variables, environment protection).
+#
+# What it does: join the tailnet as an ephemeral tag:ci node, then ssh to the
+# NAS's tailnet address as the `deploy` user and run
+#   deploy <branch> <commit sha>
+# which github_deploy.sh turns into deploy_site.sh --yes --rev <sha>. The
+# deploy logic, the deletion guardrail and the per-site lock all live on the
+# NAS; this workflow cannot run anything else there. The NAS's public SSH
+# port is never used: the firewall admits it only from the owner's own IP.
+#
+# If this infrastructure repo is ever made public, this file can shrink to a
+# `uses: trevorbicewebdesign/tbwebdesign-server-infrastructure/.github/workflows/deploy-site.yml@main`
+# reusable workflow call. While it is private that is not an option: a public
+# project repo cannot call a reusable workflow that lives in a private repo.
+
+name: Deploy to NAS
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        type: string
+        description: >-
+          Leave blank (recommended): deploys the branch chosen under
+          "Use workflow from". If set, that branch must already contain the
+          chosen commit, or the NAS refuses the deploy.
+        required: false
+        default: ''
+  push:
+    branches: ['**']   # filtered to the default branch by the job's `if` below
+
+jobs:
+  deploy:
+    # Push events deploy only the default branch. Manual runs deploy the ref
+    # they were started from. No per-repo edits needed; a repo that wants
+    # fewer skipped runs can narrow `push.branches` above instead.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: Production
+    # One deploy per repo at a time; a second push waits instead of cancelling.
+    concurrency:
+      group: deploy-${{ github.repository }}
+      cancel-in-progress: false
+    # This job never calls the GitHub API, so it gets no token scopes at all.
+    permissions: {}
+
+    steps:
+      - name: Resolve branch
+        id: ref
+        env:
+          INPUT_BRANCH: ${{ inputs.branch }}
+        run: |
+          branch="${INPUT_BRANCH:-$GITHUB_REF_NAME}"
+          case "$branch" in
+            *..*|-*|*/|'') echo "Refusing suspicious branch name: $branch" >&2; exit 1 ;;
+          esac
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+
+      # The runner joins the tailnet as an ephemeral node tagged tag:ci. The
+      # ACL lets tag:ci reach tag:nas on port 222 and nothing else, and the
+      # node is removed automatically when the job ends. The OAuth client can
+      # only mint auth keys for tag:ci, so it cannot enroll anything else.
+      - name: Connect to the tailnet
+        uses: tailscale/github-action@6cae46e2d796f265265cfcf628b72a32b4d7cade # v3
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
+
+      - name: Install deploy key and pinned NAS host key
+        env:
+          NAS_DEPLOY_SSH_KEY: ${{ secrets.NAS_DEPLOY_SSH_KEY }}
+          NAS_HOST_KEY: ${{ secrets.NAS_HOST_KEY }}
+          NAS_HOST: ${{ vars.NAS_HOST }}
+          NAS_SSH_PORT: ${{ vars.NAS_SSH_PORT }}
+        run: |
+          set -eu
+          : "${NAS_DEPLOY_SSH_KEY:?secret NAS_DEPLOY_SSH_KEY is not set on the Production environment}"
+          : "${NAS_HOST_KEY:?secret NAS_HOST_KEY is not set on the Production environment}"
+          : "${NAS_HOST:?variable NAS_HOST is not set}"
+          : "${NAS_SSH_PORT:?variable NAS_SSH_PORT is not set}"
+          umask 077
+          mkdir -p "$HOME/.ssh"
+          printf '%s\n' "$NAS_DEPLOY_SSH_KEY" > "$HOME/.ssh/nas_deploy_key"
+          # known_hosts uses a bare hostname for port 22 and [host]:port otherwise.
+          if [ "$NAS_SSH_PORT" = "22" ]; then
+            printf '%s %s\n' "$NAS_HOST" "$NAS_HOST_KEY" > "$HOME/.ssh/nas_known_hosts"
+          else
+            printf '[%s]:%s %s\n' "$NAS_HOST" "$NAS_SSH_PORT" "$NAS_HOST_KEY" > "$HOME/.ssh/nas_known_hosts"
+          fi
+
+      - name: Deploy
+        env:
+          NAS_HOST: ${{ vars.NAS_HOST }}
+          NAS_SSH_PORT: ${{ vars.NAS_SSH_PORT }}
+          BRANCH: ${{ steps.ref.outputs.branch }}
+        run: |
+          set -eu
+          echo "Deploying $GITHUB_REPOSITORY@$GITHUB_SHA (branch $BRANCH) to $NAS_HOST"
+          ssh -o StrictHostKeyChecking=yes \
+              -o UserKnownHostsFile="$HOME/.ssh/nas_known_hosts" \
+              -o IdentitiesOnly=yes \
+              -o BatchMode=yes \
+              -o ConnectTimeout=20 \
+              -i "$HOME/.ssh/nas_deploy_key" \
+              -p "$NAS_SSH_PORT" \
+              "deploy@$NAS_HOST" \
+              deploy "$BRANCH" "$GITHUB_SHA"
+
+      - name: Remove deploy key
+        if: always()
+        run: rm -f "$HOME/.ssh/nas_deploy_key" "$HOME/.ssh/nas_known_hosts"

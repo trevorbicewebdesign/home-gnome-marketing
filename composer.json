@@ -1,0 +1,65 @@
+{
+    "name": "trevorbicewebdesign/home-gnome-marketing",
+    "description": "The Home Gnome marketing site (WordPress): core, plugins and the parent theme installed by Composer, plus the site's own block theme.",
+    "type": "project",
+    "license": "proprietary",
+    "config": {
+        "vendor-dir": "vendor",
+        "allow-plugins": {
+            "composer/installers": true
+        },
+        "github-protocols": [
+            "https"
+        ],
+        "preferred-install": "dist",
+        "parallel-install": 1,
+        "platform": {
+            "php": "8.4.0"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/trevorbicewebdesign/advanced-custom-fields-pro.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/trevorbicewebdesign/gravityforms.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/trevorbicewebdesign/akeebabackupwp.git"
+        }
+    ],
+    "require": {
+        "composer/installers": "^2.0",
+        "roots/wordpress-no-content": "*",
+        "trevorbicewebdesign/advanced-custom-fields-pro": "^6.8",
+        "trevorbicewebdesign/gravityforms": "^3.1",
+        "trevorbicewebdesign/akeebabackupwp": "*",
+        "wpackagist-plugin/create-block-theme": "*",
+        "wpackagist-plugin/ultimate-addons-for-gutenberg": "*",
+        "wpackagist-theme/spectra-one": "*"
+    },
+    "require-dev": {
+        "wpackagist-plugin/query-monitor": "*"
+    },
+    "scripts": {
+        "post-install-cmd": "@php bin/install-core.php",
+        "post-update-cmd": "@php bin/install-core.php"
+    }
+}

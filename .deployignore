@@ -1,0 +1,41 @@
+# Files and folders that must never be copied into the web root by the NAS deploy
+# (deploy_site.sh in tbwebdesign-server-infrastructure, which hands this file to rsync).
+# rsync --exclude-from semantics: a trailing slash matches a directory and everything in it.
+
+# --- dev tooling / CI (repo root only) --------------------------------------
+/.git/
+/.github/
+/bin/
+/docs/
+/vendor/
+/node_modules/
+/.gitignore
+/.deployignore
+/.deploykeep
+/composer.json
+/composer.lock
+/README.md
+/CLAUDE.md
+/local-phpinfo.php
+/local-xdebuginfo.php
+/auth.json
+*.env
+*.env.*
+
+# --- production-owned files: never overwrite from git ------------------------
+/wp-config.php
+/wp-config-local.php
+/.htaccess
+/wordfence-waf.php
+/wp-content/uploads/
+/wp-content/cache/
+/wp-content/upgrade/
+/wp-content/upgrade-temp-backup/
+/wp-content/backups/
+/wp-content/debug.log
+/wp-content/advanced-cache.php
+/wp-content/object-cache.php
+/wp-content/db.php
+/wp-content/akeebabackup_secretkey.php
+# Composer-installed plugins ship as git clones; their history stays out of the docroot.
+/wp-content/plugins/*/.git/

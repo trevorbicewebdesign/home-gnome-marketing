@@ -1,0 +1,11 @@
+# Files on the server that a deploy must never delete, although they sit inside a folder that
+# the NAS deploy (deploy_site.sh in tbwebdesign-server-infrastructure) syncs with --delete:
+# what a plugin writes into its own folder while it runs.
+#
+# One rsync pattern per line, relative to the plugin or theme folder ("/" is that folder).
+
+# Akeeba Backup: backup archives, its working files, and the settings file it generates.
+/app/backups/***
+/app/tmp/***
+/helpers/private/***
+/app/Solo/assets/private/***
