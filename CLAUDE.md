@@ -18,3 +18,4 @@
 - Deploys go through tbwebdesign-server-infrastructure (`deploy_site.sh`); `.deployignore` and
   `.deploykeep` are read by it. Keep `.github/workflows/deploy.yml` identical to that repo's template.
 - Work on a branch and open a PR; never push `main`.
+- The build of the designs in WordPress is its own session, on Opus 5.5 with Ultra (the owner's instruction, 2026-11-05); the design brief is `docs/design/brief.md`, the token and block spec `docs/design/house-style.md`.
