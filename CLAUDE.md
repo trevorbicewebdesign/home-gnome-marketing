@@ -9,10 +9,13 @@
   URL and salts live in `wp-config-local.php` (git-ignored). Never commit a key, token, salt,
   licence key or `auth.json`.
 - The site's own code is the block theme `wp-content/themes/home-gnome` (child of Spectra One):
-  `theme.json` tokens, `patterns/`, `templates/`, `parts/`, `acf-json/`. Prefer theme.json and
-  patterns over CSS; no page builder, no JS framework. Every form is Gravity Forms.
+  `theme.json` tokens, `patterns/`, `templates/`, `parts/`, `acf-json/`. Build with Spectra One's and Spectra's native blocks, block styles and
+  theme.json tokens; custom CSS is a last resort, and when native blocks cannot express something,
+  write a custom block (ACF block with block.json and a PHP render template) rather than CSS
+  hacks. No page builder, no JS framework. Every form is Gravity Forms.
 - Local tooling: `source ../.envrc` (Local's PHP 8.4, Composer, `wp`). The Local database is the
   developer's; changing content or settings there is fine, dropping it is not.
 - Deploys go through tbwebdesign-server-infrastructure (`deploy_site.sh`); `.deployignore` and
   `.deploykeep` are read by it. Keep `.github/workflows/deploy.yml` identical to that repo's template.
 - Work on a branch and open a PR; never push `main`.
+- The build of the designs in WordPress is its own session, on Opus 5.5 with Ultra (the owner's instruction, 2026-11-05); the design brief is `docs/design/brief.md`, the token and block spec `docs/design/house-style.md`.
