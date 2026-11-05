@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "home-gnome/plan-comparison",
+	"title": "Plan comparison",
+	"description": "The hosting options (and optionally the native app) from the Plans records, as core Columns of cards with written status labels, price status, inclusions and an action.",
+	"category": "widgets",
+	"icon": "columns",
+	"keywords": [ "plans", "hosting", "pricing", "home gnome" ],
+	"textdomain": "home-gnome",
+	"acf": {
+		"blockVersion": 3,
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"html": false,
+		"mode": false
+	},
+	"example": {
+		"attributes": {
+			"data": { "plans": "all", "detail": "full" }
+		}
+	}
+}

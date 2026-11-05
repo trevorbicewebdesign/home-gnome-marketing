@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "home-gnome/feature-list",
+	"title": "Feature list",
+	"description": "Feature or integration records as a responsive grid of core Group cards (3, 2, then 1 column).",
+	"category": "widgets",
+	"icon": "screenoptions",
+	"keywords": [
+		"features",
+		"integrations",
+		"home gnome"
+	],
+	"textdomain": "home-gnome",
+	"acf": {
+		"blockVersion": 3,
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"anchor": true,
+		"html": false,
+		"mode": false
+	},
+	"example": {
+		"attributes": {
+			"data": {
+				"source": "hg_feature",
+				"area": "",
+				"columns": "3",
+				"show_details": 1
+			}
+		}
+	}
+}

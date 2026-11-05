@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/wp/7.1/theme.json",
+	"version": 3,
+	"title": "Coral",
+	"slug": "coral",
+	"blockTypes": [
+		"core/button"
+	],
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--secondary)",
+			"text": "var(--wp--preset--color--heading)"
+		},
+		":hover": {
+			"color": {
+				"background": "var(--wp--preset--color--quaternary)",
+				"text": "var(--wp--preset--color--heading)"
+			}
+		},
+		":focus": {
+			"color": {
+				"background": "var(--wp--preset--color--quaternary)",
+				"text": "var(--wp--preset--color--heading)"
+			}
+		}
+	}
+}

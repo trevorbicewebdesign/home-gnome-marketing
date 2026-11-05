@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "home-gnome/faq-list",
+	"title": "FAQ list",
+	"description": "Questions from the FAQ records as core Details blocks, all closed by default.",
+	"category": "widgets",
+	"icon": "editor-help",
+	"keywords": [
+		"faq",
+		"questions",
+		"home gnome"
+	],
+	"textdomain": "home-gnome",
+	"acf": {
+		"blockVersion": 3,
+		"mode": "preview",
+		"renderTemplate": "render.php"
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"anchor": true,
+		"html": false,
+		"mode": false
+	},
+	"example": {
+		"attributes": {
+			"data": {
+				"show_on": "home",
+				"limit": 0
+			}
+		}
+	}
+}

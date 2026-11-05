@@ -1,0 +1,128 @@
+{
+    "0": {
+        "title": "Product updates",
+        "description": "Early access and product news (was Early access). The download never depends on it. Placed on Get started.",
+        "button": {
+            "type": "text",
+            "text": "Get early access"
+        },
+        "fields": [
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "email",
+                "id": 1,
+                "label": "Email",
+                "isRequired": true,
+                "autocompleteAttribute": "email",
+                "enableAutocomplete": true,
+                "visibility": "visible",
+                "formId": 3,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            },
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "text",
+                "id": 2,
+                "label": "Name",
+                "isRequired": false,
+                "autocompleteAttribute": "name",
+                "enableAutocomplete": true,
+                "description": "Optional.",
+                "visibility": "visible",
+                "formId": 3,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            },
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "checkbox",
+                "id": 3,
+                "label": "Tell me about",
+                "choices": [
+                    {
+                        "text": "Early access and the free download",
+                        "value": "Early access and the free download",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "New releases",
+                        "value": "New releases",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "Hosted",
+                        "value": "Hosted",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "The native app",
+                        "value": "The native app",
+                        "isSelected": false
+                    }
+                ],
+                "inputs": [
+                    {
+                        "id": "3.1",
+                        "label": "Early access and the free download",
+                        "name": ""
+                    },
+                    {
+                        "id": "3.2",
+                        "label": "New releases",
+                        "name": ""
+                    },
+                    {
+                        "id": "3.3",
+                        "label": "Hosted",
+                        "name": ""
+                    },
+                    {
+                        "id": "3.4",
+                        "label": "The native app",
+                        "name": ""
+                    }
+                ],
+                "visibility": "visible",
+                "formId": 3,
+                "fields": "",
+                "cssClass": "",
+                "selectAllText": "Select All",
+                "inputType": ""
+            }
+        ],
+        "labelPlacement": "top_label",
+        "descriptionPlacement": "below",
+        "cssClass": "",
+        "id": 3,
+        "markupVersion": 2,
+        "validationPlacement": "above",
+        "subLabelPlacement": "above",
+        "validationSummary": true,
+        "requiredIndicator": "text",
+        "columnLayout": "fixed",
+        "confirmations": [
+            {
+                "id": "5f0000000000a",
+                "name": "Default Confirmation",
+                "isDefault": true,
+                "type": "message",
+                "message": "<strong>Thanks, we'll be in touch.</strong> We'll email you about what you picked. The free download will never depend on this list.",
+                "disableAutoformat": false
+            }
+        ],
+        "notifications": []
+    },
+    "version": "3.2.1"
+}

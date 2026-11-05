@@ -1,0 +1,113 @@
+{
+    "0": {
+        "title": "Native app notifications",
+        "description": "Notifications about the planned native app. Placed on Plans & hosting.",
+        "button": {
+            "type": "text",
+            "text": "Get notified"
+        },
+        "fields": [
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "email",
+                "id": 1,
+                "label": "Email",
+                "isRequired": true,
+                "autocompleteAttribute": "email",
+                "enableAutocomplete": true,
+                "visibility": "visible",
+                "formId": 2,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            },
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "radio",
+                "id": 2,
+                "label": "Platform",
+                "choices": [
+                    {
+                        "text": "iOS",
+                        "value": "iOS",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "Android",
+                        "value": "Android",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "Both",
+                        "value": "Both",
+                        "isSelected": false
+                    }
+                ],
+                "visibility": "visible",
+                "formId": 2,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            },
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "radio",
+                "id": 3,
+                "label": "Hosting preference",
+                "choices": [
+                    {
+                        "text": "Self-hosted",
+                        "value": "Self-hosted",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "Hosted",
+                        "value": "Hosted",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "Undecided",
+                        "value": "Undecided",
+                        "isSelected": false
+                    }
+                ],
+                "visibility": "visible",
+                "formId": 2,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            }
+        ],
+        "labelPlacement": "top_label",
+        "descriptionPlacement": "below",
+        "cssClass": "",
+        "id": 2,
+        "markupVersion": 2,
+        "validationPlacement": "above",
+        "subLabelPlacement": "above",
+        "validationSummary": true,
+        "requiredIndicator": "text",
+        "columnLayout": "fixed",
+        "confirmations": [
+            {
+                "id": "5f0000000000a",
+                "name": "Default Confirmation",
+                "isDefault": true,
+                "type": "message",
+                "message": "<strong>Thanks, you're on the list.</strong> The native app is planned, not released yet: we'll email you when there's news about it.",
+                "disableAutoformat": false
+            }
+        ],
+        "notifications": []
+    },
+    "version": "3.2.1"
+}
