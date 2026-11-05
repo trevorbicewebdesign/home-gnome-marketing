@@ -15,11 +15,14 @@ on a home server or NAS.
 
 | | |
 | --- | --- |
-| Free | the admin and the Home Assistant integration (stock sensors, actions, NFC blueprints) |
-| Paid | the web app: the phone view of the house (list, item sheet, add, scan, move, orders, purchases, photos, ask) |
-| Also | the Alexa skill ("where is", "how many", "I used one") |
-| Planned | a mobile app for barcode and NFC scanning |
-| Licence | proprietary, not open source; sold as a download with a licence key; pricing not settled |
+| Free | **the whole product, self-hosted**: server, admin, web app (the phone view of the house), Home Assistant integration (stock sensors, actions, NFC blueprints), Alexa skill; no licence key |
+| Paid | a **Hosted** edition (private instance per household, subscription, price not announced) |
+| Planned | a native iOS/Android app for barcode and NFC scanning: one-time purchase for self-hosters, inclusion with Hosted proposed |
+| Licence | proprietary, not open source |
+
+This is the model decided on 2026-11-05 (round 3, [plans-and-model.md](plans-and-model.md)).
+Round 1 below was briefed with the earlier "free admin, paid web app" split; where the two
+disagree, round 3 wins.
 
 Audience: self-hosters and home-lab people, Home Assistant users, and organised households who
 want to know what is in the pantry, garage and closets without a spreadsheet.
