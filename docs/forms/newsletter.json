@@ -1,0 +1,97 @@
+{
+    "0": {
+        "title": "Newsletter",
+        "description": "The footer newsletter: email and explicit consent, separate from service notifications.",
+        "button": {
+            "type": "text",
+            "text": "Subscribe"
+        },
+        "fields": [
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "email",
+                "id": 1,
+                "label": "Email",
+                "isRequired": true,
+                "autocompleteAttribute": "email",
+                "enableAutocomplete": true,
+                "visibility": "visible",
+                "formId": 5,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            },
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "consent",
+                "checked_indicator_url": "http://home-gnome-marketing.local/wp-content/plugins/gravityforms/images/tick.png",
+                "checked_indicator_markup": "<img src=\"http://home-gnome-marketing.local/wp-content/plugins/gravityforms/images/tick.png\" alt=\"\" />",
+                "id": 2,
+                "label": "Consent",
+                "isRequired": true,
+                "checkboxLabel": "Email me Home Gnome news. I can unsubscribe any time.",
+                "inputs": [
+                    {
+                        "id": "2.1",
+                        "label": "Consent",
+                        "name": ""
+                    },
+                    {
+                        "id": "2.2",
+                        "label": "Text",
+                        "name": "",
+                        "isHidden": true
+                    },
+                    {
+                        "id": "2.3",
+                        "label": "Description",
+                        "name": "",
+                        "isHidden": true
+                    }
+                ],
+                "choices": [
+                    {
+                        "text": "Checked",
+                        "value": "1",
+                        "isSelected": false,
+                        "price": ""
+                    }
+                ],
+                "visibility": "visible",
+                "formId": 5,
+                "fields": "",
+                "cssClass": "",
+                "validateState": true,
+                "inputType": ""
+            }
+        ],
+        "labelPlacement": "top_label",
+        "descriptionPlacement": "below",
+        "cssClass": "",
+        "id": 5,
+        "markupVersion": 2,
+        "validationPlacement": "above",
+        "subLabelPlacement": "above",
+        "validationSummary": true,
+        "requiredIndicator": "text",
+        "columnLayout": "fixed",
+        "confirmations": [
+            {
+                "id": "5f0000000000a",
+                "name": "Default Confirmation",
+                "isDefault": true,
+                "type": "message",
+                "message": "<strong>You're subscribed.</strong> Thanks for following along.",
+                "disableAutoformat": false
+            }
+        ],
+        "notifications": []
+    },
+    "version": "3.2.1"
+}

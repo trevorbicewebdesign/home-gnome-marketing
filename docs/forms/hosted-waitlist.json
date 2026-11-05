@@ -1,0 +1,123 @@
+{
+    "0": {
+        "title": "Hosted waitlist",
+        "description": "Joining the waitlist for the Hosted edition. Placed on Plans & hosting.",
+        "button": {
+            "type": "text",
+            "text": "Join the hosted waitlist"
+        },
+        "fields": [
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "email",
+                "id": 1,
+                "label": "Email",
+                "isRequired": true,
+                "autocompleteAttribute": "email",
+                "enableAutocomplete": true,
+                "visibility": "visible",
+                "formId": 1,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            },
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "text",
+                "id": 2,
+                "label": "Name",
+                "isRequired": false,
+                "autocompleteAttribute": "name",
+                "enableAutocomplete": true,
+                "description": "Optional.",
+                "visibility": "visible",
+                "formId": 1,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            },
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "radio",
+                "id": 3,
+                "label": "How do you use Home Gnome now?",
+                "choices": [
+                    {
+                        "text": "Self-hosting",
+                        "value": "Self-hosting",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "Considering it",
+                        "value": "Considering it",
+                        "isSelected": false
+                    },
+                    {
+                        "text": "New here",
+                        "value": "New here",
+                        "isSelected": false
+                    }
+                ],
+                "visibility": "visible",
+                "formId": 1,
+                "fields": "",
+                "cssClass": "",
+                "inputType": ""
+            },
+            {
+                "is_payment": false,
+                "duplicatable": true,
+                "noURLs": false,
+                "repeatable": true,
+                "type": "checkbox",
+                "id": 4,
+                "label": "Native app",
+                "choices": [
+                    {
+                        "text": "Also tell me about the native app",
+                        "value": "Also tell me about the native app",
+                        "isSelected": false
+                    }
+                ],
+                "inputs": [
+                    {
+                        "id": "4.1",
+                        "label": "Also tell me about the native app",
+                        "name": ""
+                    }
+                ],
+                "visibility": "visible",
+                "formId": 1,
+                "fields": "",
+                "cssClass": "",
+                "selectAllText": "Select All",
+                "inputType": ""
+            }
+        ],
+        "labelPlacement": "top_label",
+        "descriptionPlacement": "below",
+        "cssClass": "",
+        "id": 1,
+        "confirmations": [
+            {
+                "id": "5f0000000000a",
+                "name": "Default Confirmation",
+                "isDefault": true,
+                "type": "message",
+                "message": "<strong>You've joined the Hosted waitlist.</strong> We'll email you when Hosted has a date and a price. Joining puts you on a list: it doesn't reserve an instance or an address.",
+                "disableAutoformat": false
+            }
+        ],
+        "notifications": []
+    },
+    "version": "3.2.1"
+}
