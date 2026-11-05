@@ -1,0 +1,63 @@
+{
+    "key": "post_type_hg_feature",
+    "title": "Features",
+    "menu_order": 0,
+    "active": true,
+    "post_type": "hg_feature",
+    "advanced_configuration": false,
+    "import_source": "",
+    "import_date": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "labels": {
+        "name": "Features",
+        "singular_name": "Feature",
+        "menu_name": "Features",
+        "all_items": "All Features",
+        "add_new_item": "Add New Feature",
+        "edit_item": "Edit Feature",
+        "new_item": "New Feature",
+        "view_item": "View Feature",
+        "search_items": "Search Features",
+        "not_found": "No features found"
+    },
+    "description": "Product features: one record per thing Home Gnome does, rendered by the Feature list block.",
+    "public": false,
+    "hierarchical": false,
+    "exclude_from_search": true,
+    "publicly_queryable": false,
+    "show_ui": true,
+    "show_in_menu": true,
+    "admin_menu_parent": "",
+    "show_in_admin_bar": true,
+    "show_in_nav_menus": false,
+    "show_in_rest": true,
+    "rest_base": "",
+    "rest_namespace": "wp\/v2",
+    "rest_controller_class": "WP_REST_Posts_Controller",
+    "menu_position": 25,
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-star-filled"
+    },
+    "rename_capabilities": false,
+    "singular_capability_name": "post",
+    "plural_capability_name": "posts",
+    "supports": [
+        "title",
+        "custom-fields"
+    ],
+    "taxonomies": [],
+    "has_archive": false,
+    "has_archive_slug": "",
+    "rewrite": {
+        "permalink_rewrite": "no_permalink"
+    },
+    "query_var": "none",
+    "query_var_name": "",
+    "can_export": true,
+    "delete_with_user": false,
+    "register_meta_box_cb": "",
+    "enter_title_here": "",
+    "modified": 1793911151
+}

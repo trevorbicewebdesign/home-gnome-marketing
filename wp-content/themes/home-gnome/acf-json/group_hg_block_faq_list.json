@@ -1,0 +1,80 @@
+{
+    "key": "group_hg_block_faq_list",
+    "title": "Block: FAQ list",
+    "fields": [
+        {
+            "key": "field_hg_faq_list_show_on",
+            "label": "Questions for",
+            "name": "show_on",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "home": "Homepage",
+                "plans": "Plans & hosting",
+                "faq": "FAQ page",
+                "all": "Every question"
+            },
+            "default_value": "faq",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "return_format": "value",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
+            "key": "field_hg_faq_list_limit",
+            "label": "Limit",
+            "name": "limit",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "0 shows all.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "min": "",
+            "max": "",
+            "step": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "home-gnome\/faq-list"
+            }
+        ]
+    ],
+    "menu_order": 7,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "active": true,
+    "description": "",
+    "show_in_rest": false,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793911151
+}
