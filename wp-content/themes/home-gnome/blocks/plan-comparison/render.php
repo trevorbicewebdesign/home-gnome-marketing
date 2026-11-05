@@ -129,8 +129,8 @@ foreach ( $plans as $plan ) {
 			$inner .= group(
 				status_label( __( 'Proposed', 'home-gnome' ), 'quaternary' ) . paragraph( text( $app_note ), array( 'fontSize' => 'small' ) ),
 				array(
-					'style'  => array( 'spacing' => array( 'blockGap' => 'var:preset|spacing|xx-small' ) ),
-					'layout' => array( 'type' => 'flex', 'flexWrap' => 'nowrap', 'verticalAlignment' => 'top' ),
+					'style'  => array( 'spacing' => array( 'blockGap' => 'var:preset|spacing|xxx-small' ) ),
+					'layout' => array( 'type' => 'default' ),
 				)
 			);
 		} else {

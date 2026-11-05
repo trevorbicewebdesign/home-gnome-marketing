@@ -552,6 +552,7 @@
 					}
 				},
 				"typography": {
+					"fontFamily": "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace",
 					"fontSize": "var(--wp--preset--font-size--x-small)"
 				}
 			},
@@ -580,15 +581,6 @@
 			"name": "footer",
 			"title": "Footer",
 			"area": "footer"
-		}
-	],
-	"customTemplates": [
-		{
-			"name": "page-landing",
-			"title": "Landing page (sections, no title)",
-			"postTypes": [
-				"page"
-			]
 		}
 	]
 }
