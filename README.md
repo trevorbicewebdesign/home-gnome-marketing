@@ -56,7 +56,8 @@ is why the header and footer use core blocks.
 Plans, prices, FAQs, features and integrations are records (Plans, FAQs, Features, Integrations
 in wp-admin), not text in the pages; the blocks select them by type and display order, never by
 post ID. A plan's price shows as a status ("Free, forever", "Price to be announced") until a
-price is announced.
+price is announced; an announced subscription leads with its yearly price ("$50 a year", then
+"or $5 a month"), and a founding offer shows under it with a "Founding households" label.
 
 While the free download is not public, the main action is **Get early access** (header, hero,
 closing CTA, the Self-hosted plan's CTA). When it is, change those four to **Download free**.

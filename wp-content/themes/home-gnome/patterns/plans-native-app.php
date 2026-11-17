@@ -30,7 +30,7 @@
 <p style="margin-top:0;margin-bottom:0">A native app for iOS and Android is planned, with barcode and NFC scanning. It will connect to either hosting option.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"neutral","fontSize":"small"} -->
-<p class="has-neutral-color has-text-color has-small-font-size" style="margin-top:0;margin-bottom:0">One-time purchase for self-hosters; inclusion with Hosted proposed. Price not announced. Until it ships, the web app in your phone's browser does the everyday work.</p>
+<p class="has-neutral-color has-text-color has-small-font-size" style="margin-top:0;margin-bottom:0">Included with Hosted. A one-time purchase for self-hosters; that price is not announced yet. Until it ships, the web app in your phone's browser does the everyday work.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:uagb/container -->

@@ -3,8 +3,10 @@
  * Plan comparison: the Plans records as core Columns of cards.
  *
  * Rendering rules from docs/design/plans-and-model.md: free_forever reads "Free, forever",
- * unannounced reads "Price to be announced" (never $0), a proposed app inclusion carries a written
- * "Proposed" label, a planned record never produces a store button, and every status is written out.
+ * unannounced reads "Price to be announced" (never $0), an announced subscription leads with its
+ * yearly price ("$50 a year", then "or $5 a month"), a founding offer carries a written "Founding
+ * households" label, a proposed app inclusion carries a written "Proposed" label, a planned record
+ * never produces a store button, and every status is written out.
  *
  * @package home-gnome
  *
@@ -49,6 +51,14 @@ $intervals     = array(
 	'yearly'  => __( 'yearly', 'home-gnome' ),
 );
 
+// "$50" for US dollars, "50 EUR" otherwise; cents only when there are any.
+$money = static function ( $amount, string $currency ): string {
+	$amount   = (float) $amount;
+	$number   = number_format_i18n( $amount, floor( $amount ) === $amount ? 0 : 2 );
+	$currency = strtoupper( trim( $currency ) );
+	return ( '' === $currency || 'USD' === $currency ) ? '$' . $number : $number . ' ' . $currency;
+};
+
 $small_neutral = array( 'textColor' => 'neutral', 'fontSize' => 'small' );
 $columns       = '';
 
@@ -68,15 +78,28 @@ foreach ( $plans as $plan ) {
 	}
 
 	// The price line: a status, never an invented amount.
+	$billing  = (string) get_field( 'billing_model', $id );
+	$currency = (string) get_field( 'currency', $id );
+	$monthly  = '';
 	switch ( get_field( 'price_status', $id ) ) {
 		case 'free_forever':
 			$price = __( 'Free, forever', 'home-gnome' );
 			break;
 		case 'announced':
 			$amount = get_field( 'price_amount', $id );
-			$price  = ( null === $amount || '' === $amount )
-				? __( 'Price to be announced', 'home-gnome' )
-				: trim( number_format_i18n( (float) $amount, 2 ) . ' ' . get_field( 'currency', $id ) );
+			if ( null === $amount || '' === $amount ) {
+				$price = __( 'Price to be announced', 'home-gnome' );
+			} elseif ( 'subscription' === $billing ) {
+				/* translators: %s: the yearly price, e.g. $50 */
+				$price = sprintf( __( '%s a year', 'home-gnome' ), $money( $amount, $currency ) );
+				$per_month = get_field( 'price_monthly', $id );
+				if ( null !== $per_month && '' !== $per_month ) {
+					/* translators: %s: the monthly price, e.g. $5 */
+					$monthly = sprintf( __( 'or %s a month', 'home-gnome' ), $money( $per_month, $currency ) );
+				}
+			} else {
+				$price = $money( $amount, $currency );
+			}
 			break;
 		default:
 			$price = __( 'Price to be announced', 'home-gnome' );
@@ -93,13 +116,25 @@ foreach ( $plans as $plan ) {
 		)
 	);
 
-	$note = (string) get_field( 'price_note', $id );
-	if ( 'subscription' === get_field( 'billing_model', $id ) && ! $note ) {
+	$note = $monthly ?: (string) get_field( 'price_note', $id );
+	if ( 'subscription' === $billing && ! $note ) {
 		$chosen = array_intersect_key( $intervals, array_flip( (array) get_field( 'billing_intervals', $id ) ) );
 		$note   = $chosen ? ucfirst( implode( __( ' or ', 'home-gnome' ), $chosen ) ) . __( ' subscription', 'home-gnome' ) : '';
 	}
 	if ( $note ) {
 		$inner .= paragraph( text( $note ), array( 'textColor' => 'neutral', 'fontSize' => 'x-small', 'style' => array( 'spacing' => array( 'margin' => array( 'top' => '0' ) ) ) ) );
+	}
+
+	// A founding offer: a written label, and only once the price is announced.
+	$offer = (string) get_field( 'founding_offer', $id );
+	if ( $offer && 'announced' === get_field( 'price_status', $id ) ) {
+		$inner .= group(
+			status_label( __( 'Founding households', 'home-gnome' ), 'tertiary' ) . paragraph( text( $offer ), array( 'fontSize' => 'small' ) ),
+			array(
+				'style'  => array( 'spacing' => array( 'blockGap' => 'var:preset|spacing|xxx-small' ) ),
+				'layout' => array( 'type' => 'default' ),
+			)
+		);
 	}
 
 	$highlights = array_filter( array_column( (array) get_field( 'highlights', $id ), 'highlight' ) );

@@ -267,11 +267,11 @@
         },
         {
             "key": "field_hg_plan_price_amount",
-            "label": "Price amount",
+            "label": "Price amount (yearly for a subscription)",
             "name": "price_amount",
             "aria-label": "",
             "type": "number",
-            "instructions": "Only once a price is announced.",
+            "instructions": "Only once a price is announced. For a subscription this is the yearly price, shown first.",
             "required": false,
             "conditional_logic": [
                 [
@@ -279,6 +279,41 @@
                         "field": "field_hg_plan_price_status",
                         "operator": "==",
                         "value": "announced"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hg_plan_price_monthly",
+            "label": "Monthly price",
+            "name": "price_monthly",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "A subscription's monthly price, shown after the yearly one (\"or $5 a month\").",
+            "required": false,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_hg_plan_price_status",
+                        "operator": "==",
+                        "value": "announced"
+                    },
+                    {
+                        "field": "field_hg_plan_billing_model",
+                        "operator": "==",
+                        "value": "subscription"
                     }
                 ]
             ],
@@ -332,6 +367,34 @@
             "instructions": "The line under the price, e.g. \"No licence key.\"",
             "required": false,
             "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_hg_plan_founding_offer",
+            "label": "Founding offer",
+            "name": "founding_offer",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "An announced introductory offer, shown under the price with a \"Founding households\" label. Leave empty when there is none.",
+            "required": false,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_hg_plan_price_status",
+                        "operator": "==",
+                        "value": "announced"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -806,5 +869,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793911151
+    "modified": 1794787200
 }

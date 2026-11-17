@@ -1,5 +1,14 @@
 # Plans page and the business model on the site (round 3)
 
+> **Prices decided 2026-11-16** (hosted-edition design, home-gnome PR #213, decisions 11 and 12):
+> Hosted is **$50 a year or $5 a month**, yearly shown first: a private instance, daily backups,
+> every feature, 10 GB of photos and documents, a monthly AI allowance and the native app
+> included. The first 100 households can be **Founding households at $40 a year**, kept for as
+> long as they stay. Self-hosted stays free and complete. Hosted stays **Coming** until launch,
+> which waits on the security checklist. A Plus plan comes later and is not on the site. The
+> tables below are updated to match; the native app's own price for self-hosters is still
+> unannounced.
+
 Decided by the owner on 2026-11-05: the whole product is **free to self-host**; the paid things
 are a **Hosted** edition (a private instance per household, subscription, price not announced)
 and a **native iOS/Android app** (one-time purchase for self-hosters; inclusion with Hosted is
@@ -35,11 +44,11 @@ optional native companion app.* (so the third column does not read as a third se
 | | Self-hosted | Hosted | Native app |
 | --- | --- | --- | --- |
 | Status | Available | Coming | Planned |
-| Lead | Free, forever | Price to be announced | One-time purchase for self-hosters |
+| Lead | Free, forever | $50 a year, or $5 a month; Founding households (first 100) $40 a year for as long as they stay | One-time purchase for self-hosters; price to be announced |
 | Where it runs | your server or NAS | a private instance for your household | your iOS or Android device |
-| Includes | server, admin, web app, Home Assistant, Alexa | the same complete product, plus managed backups, updates and support | barcode and NFC scanning; connects to either edition |
+| Includes | every feature: server, admin, web app, Home Assistant, Alexa | every feature, 10 GB of photos and documents, a monthly AI allowance, daily backups, updates and support | barcode and NFC scanning; connects to either edition |
 | Operation | one Docker image; you manage backups and updates | a yourhouse.homegnome address (illustrative); monthly or yearly | planned app-store distribution |
-| Native app | separate purchase when available | inclusion for the whole household proposed | price unannounced |
+| Native app | separate purchase when available | included | included with Hosted; price for self-hosters unannounced |
 | CTA | Download free | Join the hosted waitlist | Get notified |
 
 Under the columns: **The product is the same. The hosting is different.** Inventory, places,
@@ -58,8 +67,9 @@ Hosted payments):
 | Is Home Gnome open source? | No. The code is proprietary. The complete self-hosted product is free to use, forever, without a licence key. |
 | What happens to my data on Hosted? | Your household's records live in its private instance, with backups managed by us. Hosting location, access, retention and deletion details are not yet announced. |
 | Can I move from Hosted to self-hosted? | Both run the same product. A supported export and migration process is not yet announced. |
-| What will the native app cost? | A one-time app-store purchase for self-hosters. Pricing unannounced; inclusion with Hosted proposed. |
-| What about other people in my household? | Hosted is one private instance per household. Native app access for everyone in it is proposed; purchase and sharing details are not final. |
+| What does Hosted cost? | $50 a year or $5 a month for a private instance with daily backups, every feature, 10 GB of photos and documents, a monthly AI allowance and the native app. The first 100 households can be Founding households at $40 a year, kept for as long as they stay. Hosted is not open yet: join the waitlist to hear when it is. |
+| What will the native app cost? | Included with Hosted. For self-hosters, a one-time app-store purchase; that price is not announced yet. |
+| What about other people in my household? | Hosted is one private instance per household, with the native app included. Sharing details are not final. |
 | Is the native app required? | No. The browser web app is included with both hosting options; the app adds barcode and NFC scanning. |
 | What happens if I cancel Hosted? | Cancellation, export and retention terms are not yet announced. |
 
@@ -121,11 +131,13 @@ the scope of their original signup.
 | edition | self_hosted | hosted | native_app |
 | hosting | own_server | managed_private_instance | not_applicable |
 | status | available | coming | planned |
-| includes_app (select, not boolean) | separate_purchase | proposed_included | not_applicable |
-| price_status | free_forever | unannounced | unannounced |
+| includes_app (select, not boolean) | separate_purchase | included | not_applicable |
+| price_status | free_forever | announced | unannounced |
 | billing_model | free | subscription | one_time |
 | billing_intervals | | monthly, yearly | |
-| price_amount | | | |
+| price_amount (yearly for a subscription) | | 50 (USD) | |
+| price_monthly | | 5 | |
+| founding_offer | | The first 100 households pay $40 a year, kept for as long as they stay. | |
 | cta_label | Download free | Join the hosted waitlist | Get notified |
 
 Also: compatible_editions (app: Self-hosted and Hosted), platforms, app_inclusion_note,
@@ -134,6 +146,7 @@ feature list, both hosting records), operational_inclusions (Hosted), cta_url or
 gravity_form_id, display_order.
 
 Rendering rules: free_forever → "Free, forever"; unannounced → "Price to be announced", never
-$0; proposed_included → a written "Proposed" label; planned never produces a store button; both
+$0; announced subscription → the yearly price first ("$50 a year"), then "or $5 a month"; a
+founding offer → a written "Founding households" label, only with an announced price; proposed_included → a written "Proposed" label; planned never produces a store button; both
 hosting records inherit the same feature list. Remove licence-key fields, paid-web-app flags and
 the old caption default.

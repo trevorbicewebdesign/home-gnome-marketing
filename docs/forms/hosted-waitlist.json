@@ -113,7 +113,7 @@
                 "name": "Default Confirmation",
                 "isDefault": true,
                 "type": "message",
-                "message": "<strong>You've joined the Hosted waitlist.</strong> We'll email you when Hosted has a date and a price. Joining puts you on a list: it doesn't reserve an instance or an address.",
+                "message": "<strong>You've joined the Hosted waitlist.</strong> We'll email you when Hosted opens. Joining puts you on a list: it doesn't reserve an instance or an address.",
                 "disableAutoformat": false
             }
         ],
