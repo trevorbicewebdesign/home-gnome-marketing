@@ -27,10 +27,10 @@
 <h2 id="hosted-waitlist" class="wp-block-heading" style="margin-top:0;margin-bottom:0">Be first to hear about Hosted.</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<p style="margin-top:0;margin-bottom:0">Join the waitlist for availability and pricing. Joining puts you on a list: it does not reserve an instance or an address.</p>
+<p style="margin-top:0;margin-bottom:0">Join the waitlist to hear when Hosted opens. Joining puts you on a list: it does not reserve an instance or an address.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"neutral","fontSize":"small"} -->
-<p class="has-neutral-color has-text-color has-small-font-size" style="margin-top:0;margin-bottom:0">Hosted is a private instance for your household with backups, updates and support, monthly or yearly. Price to be announced.</p>
+<p class="has-neutral-color has-text-color has-small-font-size" style="margin-top:0;margin-bottom:0">Hosted is $50 a year or $5 a month: a private instance for your household with daily backups, every feature, 10 GB of photos and documents, a monthly AI allowance and the native app. The first 100 households can be Founding households at $40 a year, kept for as long as they stay.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:uagb/container -->

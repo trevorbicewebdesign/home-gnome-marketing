@@ -19,7 +19,7 @@
 <h2 class="wp-block-heading" style="margin-top:0;margin-bottom:0">Run it yourself, or let us.</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"fontSize":"large"} -->
-<p class="has-large-font-size" style="margin-top:0;margin-bottom:0">The whole product is free on your own server. Prefer to leave the hosting to us? Join the waitlist for a private instance with backups, updates and support.</p>
+<p class="has-large-font-size" style="margin-top:0;margin-bottom:0">The whole product is free on your own server. Prefer to leave the hosting to us? Join the waitlist for a private instance with daily backups, updates and support, from $50 a year.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:uagb/container -->
@@ -49,7 +49,7 @@
 <p class="has-small-font-size" style="margin-top:0;margin-bottom:0">Planned for iOS and Android, with barcode and NFC scanning. Works with either edition.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"textColor":"neutral","fontSize":"x-small"} -->
-<p class="has-neutral-color has-text-color has-x-small-font-size" style="margin-top:0;margin-bottom:0">One-time purchase for self-hosters; inclusion with Hosted proposed. Price not announced.</p>
+<p class="has-neutral-color has-text-color has-x-small-font-size" style="margin-top:0;margin-bottom:0">Included with Hosted. A one-time purchase for self-hosters; that price is not announced yet.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:uagb/container -->
