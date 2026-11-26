@@ -26,6 +26,7 @@
 <!-- wp:navigation {"textColor":"heading","overlayBackgroundColor":"background","overlayTextColor":"heading","overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
 <!-- wp:navigation-link {"label":"Product","url":"/product/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Home Assistant","url":"/home-assistant/","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Play","url":"/play/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Plans","url":"/plans/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Docs","url":"/documentation/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Get early access","url":"/get-started/#early-access","kind":"custom","isTopLevelLink":true,"SWTHideDesktop":true,"SWTHideTab":true} /-->

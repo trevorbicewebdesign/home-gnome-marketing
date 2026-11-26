@@ -41,6 +41,7 @@
 <!-- wp:navigation-link {"label":"Web app","url":"/web-app/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Home Assistant","url":"/home-assistant/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Integrations","url":"/integrations/","kind":"custom","isTopLevelLink":true} /-->
+<!-- wp:navigation-link {"label":"Play","url":"/play/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Plans &amp; hosting","url":"/plans/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Get started","url":"/get-started/","kind":"custom","isTopLevelLink":true} /-->
 <!-- wp:navigation-link {"label":"Docs","url":"/documentation/","kind":"custom","isTopLevelLink":true} /-->
