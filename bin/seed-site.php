@@ -252,11 +252,12 @@ $sections = static fn ( string ...$slugs ): string => implode(
 	array_map( static fn ( $slug ) => '<!-- wp:pattern {"slug":"home-gnome/' . $slug . '"} /-->', $slugs )
 );
 $pages    = array(
-	'home'           => array( 'Home', $sections( 'hero', 'hero-facts', 'things-places', 'counts', 'purchases', 'todos', 'hosting-connections', 'run-it-yourself', 'faq', 'closing-cta' ), '' ),
+	'home'           => array( 'Home', $sections( 'hero', 'hero-facts', 'things-places', 'counts', 'purchases', 'todos', 'hosting-connections', 'run-it-yourself', 'play-teaser', 'faq', 'closing-cta' ), '' ),
 	'product'        => array( 'Product', $sections( 'page-product', 'closing-cta' ), '' ),
 	'web-app'        => array( 'Web app', $sections( 'page-web-app', 'closing-cta' ), '' ),
 	'home-assistant' => array( 'Home Assistant', $sections( 'page-home-assistant', 'closing-cta' ), '' ),
 	'integrations'   => array( 'Integrations', $sections( 'page-integrations', 'closing-cta' ), '' ),
+	'play'           => array( 'Home Gnome Play', $sections( 'page-play' ), '' ),
 	'plans'          => array( 'Plans & hosting', $sections( 'plans-intro', 'plans-comparison', 'plans-terms', 'plans-faq', 'plans-waitlist', 'plans-native-app', 'closing-cta' ), '' ),
 	'get-started'    => array( 'Get started', $sections( 'page-get-started' ), '' ),
 	'documentation'  => array( 'Docs', $sections( 'docs-intro', 'docs-guides', 'docs-interfaces', 'docs-help', 'closing-cta' ), '' ),
