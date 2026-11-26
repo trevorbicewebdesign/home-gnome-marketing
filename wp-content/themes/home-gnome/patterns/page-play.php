@@ -51,7 +51,7 @@
 <p style="margin-top:0;margin-bottom:0">Everyone plays in the same forest at the same time, each on their own phone, tablet or computer. Log in with your name, pick a character, and you&#039;ll see the others walking about.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"0","bottom":"0"}}}} -->
-<p style="margin-top:0;margin-bottom:0">The forest runs on your own server at home, so it&#039;s still there, as you left it, when you come back.</p>
+<p style="margin-top:0;margin-bottom:0">The forest runs on a small server in your own home, and the household&#039;s players, settings and what the Gnome remembers are kept there.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:uagb/container -->
@@ -188,34 +188,34 @@
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:uagb/container -->
-<!-- wp:uagb/container {"block_id":"9d835545","widthDesktop":100,"widthTablet":100,"widthMobile":100,"directionDesktop":"row","alignItemsDesktop":"flex-end","justifyContentDesktop":"flex-start","wrapDesktop":"wrap","wrapTablet":"wrap","wrapMobile":"wrap","rowGapDesktop":32,"columnGapDesktop":32,"variationSelected":true,"topPaddingDesktop":0,"bottomPaddingDesktop":0,"leftPaddingDesktop":0,"rightPaddingDesktop":0,"paddingLink":false} -->
-<div class="wp-block-uagb-container uagb-block-9d835545">
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"138px","height":"288px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
-<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-gnome.png' ) ); ?>" alt="The Gnome" style="border-radius:0px;width:138px;height:288px"/></figure>
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|medium","margin":{"top":"0","bottom":"0"}}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"bottom"}} -->
+<div class="wp-block-group" style="margin-top:0;margin-bottom:0">
+<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"92px","height":"192px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
+<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-gnome.png' ) ); ?>" alt="The Gnome" style="border-radius:0px;width:92px;height:192px"/></figure>
 <!-- /wp:image -->
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"93px","height":"132px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
-<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-deer.png' ) ); ?>" alt="A deer" style="border-radius:0px;width:93px;height:132px"/></figure>
+<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"124px","height":"176px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
+<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-deer.png' ) ); ?>" alt="A deer" style="border-radius:0px;width:124px;height:176px"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"136px","height":"204px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
 <figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-elk.png' ) ); ?>" alt="An elk" style="border-radius:0px;width:136px;height:204px"/></figure>
 <!-- /wp:image -->
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"64px","height":"92px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
-<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-fox.png' ) ); ?>" alt="A fox, sitting" style="border-radius:0px;width:64px;height:92px"/></figure>
+<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"96px","height":"138px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
+<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-fox.png' ) ); ?>" alt="A fox, sitting" style="border-radius:0px;width:96px;height:138px"/></figure>
 <!-- /wp:image -->
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"116px","height":"104px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
 <figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-bear.png' ) ); ?>" alt="A bear" style="border-radius:0px;width:116px;height:104px"/></figure>
 <!-- /wp:image -->
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"60px","height":"75px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
-<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-owl.png' ) ); ?>" alt="A great horned owl" style="border-radius:0px;width:60px;height:75px"/></figure>
+<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"84px","height":"105px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
+<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-owl.png' ) ); ?>" alt="A great horned owl" style="border-radius:0px;width:84px;height:105px"/></figure>
 <!-- /wp:image -->
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"111px","height":"117px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
-<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-sheep.png' ) ); ?>" alt="A sheep" style="border-radius:0px;width:111px;height:117px"/></figure>
+<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"148px","height":"156px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
+<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-sheep.png' ) ); ?>" alt="A sheep" style="border-radius:0px;width:148px;height:156px"/></figure>
 <!-- /wp:image -->
-<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"120px","height":"126px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
-<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-unicorn.png' ) ); ?>" alt="A unicorn" style="border-radius:0px;width:120px;height:126px"/></figure>
+<!-- wp:image {"sizeSlug":"full","linkDestination":"none","width":"160px","height":"168px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}},"border":{"radius":"0px"}}} -->
+<figure class="wp-block-image size-full has-custom-border is-resized" style="margin-top:0;margin-bottom:0"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/img/play/sprite-unicorn.png' ) ); ?>" alt="A unicorn" style="border-radius:0px;width:160px;height:168px"/></figure>
 <!-- /wp:image -->
 </div>
-<!-- /wp:uagb/container -->
+<!-- /wp:group -->
 </div></div>
 <!-- /wp:uagb/container -->
 <!-- wp:uagb/container {"block_id":"a52a4572","isBlockRootParent":true,"contentWidth":"alignfull","innerContentWidth":"alignwide","innerContentCustomWidthDesktop":1200,"directionDesktop":"column","alignItemsDesktop":"flex-start","justifyContentDesktop":"flex-start","wrapDesktop":"nowrap","topPaddingDesktop":64,"bottomPaddingDesktop":64,"leftPaddingDesktop":32,"rightPaddingDesktop":32,"topPaddingTablet":48,"bottomPaddingTablet":48,"leftPaddingTablet":32,"rightPaddingTablet":32,"topPaddingMobile":32,"bottomPaddingMobile":32,"leftPaddingMobile":24,"rightPaddingMobile":24,"paddingLink":false,"rowGapDesktop":32,"rowGapTablet":32,"rowGapMobile":24,"columnGapDesktop":32,"columnGapTablet":32,"columnGapMobile":24,"variationSelected":true,"backgroundType":"color","backgroundColor":"var(--wp--preset--color--quaternary)"} -->
